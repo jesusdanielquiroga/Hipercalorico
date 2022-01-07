@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Registrar Suplementos</title>
+  </head>
+  <body>
+    <header class="hero__log">
+        <div class="container">
+          <nav class="nav">
+            <div id="userName"class="nav__items nav__items--cta" ></div>
+            <a class="nav__items" href="/usuarios.html">Usuarios</a>
+            <a class="nav__items" href="/suplementos.html">Suplementos</a>
+            <a class="nav__items" href="" id="cerrarSession">Cerrar Sesión</a>
+          </nav>
+          <section class="hero__container--log">
+            <div class="hero__texts--log">
+              <h1 class="hero__title--log">Bienvenido a tu casa</h1>
+            </div>
+          </section>
+        </div>
+
+<!--         <div class="hero__wave" style="overflow: hidden">
+          <svg
+            viewBox="0 0 500 150"
+            preserveAspectRatio="none"
+            style="height: 100%; width: 100%"
+          >
+            <path
+              d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+              style="stroke: none; fill: #fff"
+            ></path>
+          </svg>
+        </div> -->
+      </header>
+      <main>
+        <div class="login">
+            <div class="container__login container__table">
+                <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                            <div id="mensajes"></div>
+                            <h3 class="text-centerq">Registro Suplementos</h3>
+                            <section class="container__table">
+                            <div class="form-groupd">
+                                <label for="reference" class="text-info">Referencia:</label><br />
+                                <input type="text" name="reference" id="reference" class="form-control" required/>
+                            </div>
+                            <div class="form-groupd">
+                                <label for="brand" class="text-info">Marca:</label><br />
+                                <input type="text" name="brand" id="brand" class="form-control" required/>
+                            </div>
+                            <div class="form-groupd">
+                                <label for="category" class="text-info">Categoria:</label><br />
+                                <input type="text" name="category" id="category" class="form-control" required/>
+                            </div>
+                            <div class="form-groupd">
+                                <label for="objetivo" class="text-info">Objetivo:</label><br />
+                                <input type="text" name="objetivo" id="objetivo" class="form-control" required/>
+                            </div>
+                            <div class="form-groupd">
+                                <label for="description" class="text-info">Descripción:</label><br />
+                                <input type="text" name="descrption" id="description" class="form-control" required/>
+                            </div>
+                            <div class="form-groupd">
+                                <label for="availability" class="text-info">Disponibilidad:</label><br />
+                                <input type="text" name="availability" id="availability" class="form-control" required/>
+                            </div>
+                            <div class="form-groupd">
+                                <label for="price" class="text-info">Precio:</label><br />
+                                <input type="number" name="price" id="price" class="form-control" required/>
+                            </div>
+                            <div class="form-groupd">
+                                <label for="quantity" class="text-info">Cantidad:</label><br />
+                                <input type="number" name="quantity" id="quantity" class="form-control" required/>
+                            </div>
+                            <div class="form-groupd">
+                                <label for="photography" class="text-info">Imagen:</label><br />
+                                <input type="text" name="photography" id="photography" class="form-control" required/>
+                            </div>                            
+                            <div class="form-groupd text-center">
+                                <input type="button" name="submit" class="btn btn-info btn-md" value="Guardar" onclick="registrar()"/>
+                                <a type="button" name="submit" class="btn btn-info btn-md" value="Cancelar" href="/suplementos.html">Cancelar</a>                                 
+                            </div>
+                        </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    
+   
+    <script src="/js/registrosuplemento.js"></script>
+    <script src="/js/funciones.js"></script>
+    <script src="https://kit.fontawesome.com/ddb86f7104.js" crossorigin="anonymous"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/menu.js"></script>
+  </body>
+</html>

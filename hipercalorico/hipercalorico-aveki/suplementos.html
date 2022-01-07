@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Suplementos</title>
+    <!--
+    <script src="js/jquery-3.6.0.min.js"></script>
+    -->
+
+    
+</head>
+
+<body>
+    <header class="hero__supplements">
+        <div class="container">
+            <nav class="nav">
+                <div id="userName"class="nav__items nav__items--cta" ></div>
+                <a class="nav__items" href="/usuarios.html">Usuarios</a>
+                <a class="nav__items" href="" id="cerrarSession">Cerrar Sesión</a>
+            </nav>
+            <section class="hero__container">
+                <div class="hero__texts">
+                    <h1 class="hero__title">HiperCalorico Productos</h1>
+                    <h2 class="hero__subtitle">Los mejores productos para tu bienestar</h2>
+                    <a href="/registrosuplemento.html" class="hero__cta">Registra</a>
+                </div>
+            </section>
+        </div>
+        <div class= "hero__wave" style="overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+    </header>
+   
+        <div id="mensajes"></div>
+        <br>
+        <h1 class="text-centerq">Suplementos Activos</h1> 
+        <main class="main">
+            <!--aqui se actualizara el listado -->
+               
+        <table class="listado" id="listado"></table>
+    
+        <!-- Seccion para editar registros-->
+        <form id="editar" class="form" action="" method="put">
+            <h3 class="text-centerq">Editar Suplemento</h3>
+           <section class="login container__table">
+            <div class="form-groupd">
+                <label for="reference" class="text-info">Referencia:</label><br />
+                <input type="text" name="reference" id="referenceEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="brand" class="text-info">Marca:</label><br />
+                <input type="text" name="brand" id="brandEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="category" class="text-info">Categoria:</label><br />
+                <input type="text" name="category" id="categoryEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="objetivo" class="text-info">Objetivo:</label><br />
+                <input type="text" name="objetivo" id="objetivoEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="description" class="text-info">Descripción:</label><br />
+                <input type="text" name="descrption" id="descriptionEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="availability" class="text-info">Disponibilidad:</label><br />
+                <input type="text" name="availability" id="availabilityEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="price" class="text-info">Precio:</label><br />
+                <input type="number" name="price" id="priceEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="quantity" class="text-info">Cantidad:</label><br />
+                <input type="number" name="quantity" id="quantityEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="photography" class="text-info">Imagen:</label><br />
+                <input type="text" name="photography" id="photographyEdit" class="form-control" required/>
+            </div>                            
+            <div class="form-groupd text-center">
+                <button  class="btn-md"  onclick="actualizar()">Guardar</button>
+                <button  class="btn-md"  onclick="estadoInicial()">Cancelar</button>                                 
+            </div>
+        </section>
+        </form>
+                
+        <!-- Seccion para confirmar eliminaciòn de registros-->
+        <div id="eliminar" class="form form-group text-info" style="margin-left: 20px;" method="post">
+            <h3 class="text-centerq" id="titleIdDelete">Eliminar Registro</h3>
+            <input type="text" id="idDelete" placeholder="id">
+            <p  class="text-info" id="supplementDelete"></p>
+            <br>
+            <button class="btn-md" onclick="borrarRegistro(idDelete.value);">Aceptar</button>
+            <button class="btn-md" onclick="cuerpoInicial();">Cancelar</button>
+        </div> 
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/suplementos.js"></script>
+    <script src="js/registrosuplemento.js"></script>
+    <script src="js/editarsuplemento.js"></script>
+    <script src="js/borrarsuplemento.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+   
+    <title>Ordenes</title>
+  </head>
+  <body>
+    <header class="hero__log">
+          <div class="container">
+            <nav class="nav">
+              <div id="nameUser" class="nav__items nav__items--cta" ></div>
+              <a class="nav__items" href="/menu.html">Menú</a>
+              <a class="nav__items" href="" id="cerrarSesion">Cerrar Sesión</a>
+            </nav>
+            <section class="hero__container--log">
+              <div class="hero__texts--log">
+                <h1 class="hero__title--log">Estas en tu casa</h1>
+              </div>
+            </section>
+          </div>
+    </header>
+    <main>
+      <div id="alerta" class="alert alert-info alert-dismissible">
+        <strong>Información:</strong> <span id="mensaje"></span>
+        <button class="close">&times;</button>
+      </div>
+
+    <div class="container">
+
+      <div class="row mt-2">
+        <div class="col-md-12">
+            <table id="pedido" class="table table-bordered border-primary"></table>
+        </div>
+        <div class="col-md-12">
+            <button class="btn btn-primary" id="procesarOrden">Procesar Orden</button>
+        </div>
+        </div>
+
+      <div class="row">
+        <div class="col-md-12">
+            <table id="pedido" class="table table-bordered border-primary">
+
+            </table>
+        </div>
+      </div>
+      <div class="row">
+        <!--aqui se actualizara el listado -->
+        <div id="listado" class="col-md-12">
+
+        </div>
+      </div>
+    </div>
+    </main>
+
+
+    
+       
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/registroordenes.js"></script>
+    <script src="/js/funciones.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/ddb86f7104.js" crossorigin="anonymous"></script>
+<!--     <script src="/js/login.js"></script>
+    <script src="/js/menu.js"></script> -->
+  </body>
+</html>

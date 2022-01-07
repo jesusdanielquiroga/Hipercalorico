@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Usuarios</title>
+   
+</head>
+
+<body>
+    <header class="hero__user">
+        <div class="container">
+            <nav class="nav">
+                <div id="userName"class="nav__items nav__items--cta" ></div>
+                <a class="nav__items" href="/suplementos.html">Suplementos</a>
+                <a class="nav__items" href="" id="cerrarSession">Cerrar Sesión</a>
+            </nav>
+            <section class="hero__container">
+                <div class="hero__texts">
+                    <h1 class="hero__title">HiperCalorico Team</h1>
+                    <h2 class="hero__subtitle">Un equipo de campeones</h2>
+                    <a href="/registrousuario.html" class="hero__cta">Registra</a>
+                </div>
+            </section>
+        </div>
+        <div class= "hero__wave" style="overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+    </header> 
+        <div id="mensajes"></div> <br>
+        <h1 class="text-centerq">Usuarios Activos</h1> 
+        <br>
+        <main class="main">
+            <!--aqui se actualizara el listado -->
+            <table class="listado" id="listado"></table>
+    
+        <!-- Seccion para editar registros-->
+        <form id="editar" class="form" action="" method="put">
+            <h3 class="text-centerq">Editar Usuario</h3>
+            <section class="login container__table">
+            <div class="form-groupd">
+                <label for="id" class="text-info">ID:</label><br/>
+                <input type="number" name="id" id="idEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="username" class="text-info">Nombre:</label><br />
+                <input type="username" name="username" id="usernameEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="iduser" class="text-info">Identificación:</label><br />
+                <input type="text" name="iduser" id="iduserEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="adressUser" class="text-info">Dirección:</label><br />
+                <input type="text" name="adressUser" id="addressUserEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="cellPhone" class="text-info">Telefono:</label><br />
+                <input type="number" name="cellPhone" id="cellPhoneEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="emailUser" class="text-info">Email:</label><br />
+                <input type="email" name="emailUser" id="emailUserEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="password" class="text-info">Contraseña:</label><br />
+                <input type="password" name="password" id="passwordEdit" class="form-control" required/>
+            </div>
+            <div class="form-groupd">
+                <label for="zonaUser" class="text-info">Zona:</label><br />
+                <select name="zonaUser" id="zonaUserEdit" class="form-control" required>
+                    <option selected value="">Selecciona Zona</option>
+                    <option value="ZONA 1">CENTRO</option>
+                    <option value="ZONA 2">CALAMBEO</option>
+                    <option value="ZONA 3">SAN SIMON</option>
+                    <option value="ZONA 4">PIEDRAPINTADA</option>
+                    <option value="ZONA 5">JORDÁN</option>
+                    <option value="ZONA 6">VERGEL</option>
+                    <option value="ZONA 7">SALADO</option>
+                    <option value="ZONA 8">SIMÓN BOLIVAR</option>
+                    <option value="ZONA 9">PICALEÑA-MIROLINDO</option>
+                    <option value="ZONA 10">ESTADIO</option>
+                    <option value="ZONA 11">FERIAS</option>
+                    <option value="ZONA 12">RICAURTE</option>
+                    <option value="ZONA 13">BOQUERÓN</option>
+            </select>
+            </div>
+            <div class="form-groupd">
+                <label for="typeUser" class="text-info">Tipo de usuario:</label><br />
+                <select name="typeUser" id="typeUserEdit" class="form-control" required>
+                    <option selected value="">Selecciona tipo de usuario</option>
+                    <option value="COORD">Coordinador Zona</option>
+                    <option value="ASE">Asesor Comercial</option>
+                    <option value="ADM">Administrador</option>
+                </select>
+            </div>
+            <div class="form-groupd">
+                <button  class="btn-md" onclick="actualizar();">Guardar</button>
+                <button  class="btn-md" onclick="cuerpoInicial();">Cancelar</button>                             
+           </div> 
+        </section>
+        </form>
+                
+        <!-- Seccion para confirmar eliminaciòn de registros-->
+        <div id="eliminar" class="form form-group text-info" style="margin-left: 20px;" method="post">
+            <h3 class="text-centerq" id="titleIdDelete">Eliminar Registro</h3>
+            <input type="number" id="idDelete" placeholder="id">
+            <p  class="text-info" id="userDelete"></p>
+            <br>
+            <button class="btn-md" onclick="borrarRegistro(idDelete.value);">Aceptar</button>
+            <button class="btn-md" onclick="cuerpoInicial();">Cancelar</button>
+        </div> 
+    </main>
+    <!--
+    <script src="js/jquery-3.6.0.min.js"></script>
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/usuarios.js"></script>
+    <script src="js/editar.js"></script>
+    <script src="js/borrar.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/registrousuario.js"></script>
+ <!--    <script src="/js/login.js"></script>
+    <script src="/js/menu.js"></script> -->
+
+</body>
+
+</html>
